@@ -1,0 +1,234 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.cards {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+  height: 240px;
+  font: 16px 'Trebuchet MS';
+  margin: 10px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.card:before,
+.card:after {
+  content: attr(value);
+  position: absolute;
+  width: 12px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+.card:before {
+  top: 4px;
+  left: 4px;
+}
+
+.card:after {
+  bottom: 4px;
+  right: 4px;
+  transform: rotate(180deg);
+}
+
+.card-heart {
+  color: #e44145;
+}
+
+.card-heart:before,
+.card-heart:after {
+  content: attr(value) ' ♥';
+}
+
+.card-spade {
+  color: #252525;
+}
+
+.card-spade:before,
+.card-spade:after {
+  content: attr(value) ' ♠';
+}
+
+.card-diamond {
+  color: #252525;
+}
+
+.card-diamond:before,
+.card-diamond:after {
+  content: attr(value) ' ♦️';
+}
+
+.card-club {
+  color: #e44145;
+}
+
+.select {
+  box-shadow: 2px 2px 2px 2px red;
+  border: 0.5px solid black;
+}
+
+.card-club:before,
+.card-club:after {
+  content: attr(value) ' ♣️';
+}
+
+.card__inner {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+}
+
+.card__inner-centered {
+  justify-content: center;
+}
+
+.card__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  flex-direction: row;
+}
+
+.card__column-centered {
+  justify-content: center;
+}
+
+.card__symbol {
+  height: 23px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__symbol:before {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.card-heart .card__symbol:before {
+  content: '♥';
+}
+
+.card-spade .card__symbol:before {
+  content: '♠';
+}
+
+.card-diamond .card__symbol:before {
+  content: '♦️';
+}
+
+.card-club .card__symbol:before {
+  content: '♣️';
+}
+
+
+/* .card__symbol-rotated,
+.card__symbol:last-of-type {
+transform: rotate(180deg); 
+}
+.card__symbol:first-of-type {
+  transform: rotate(0);
+} */
+.card__symbol-big {
+  flex-basis: 60px;
+}
+
+.card__symbol-huge {
+  flex-basis: 108px;
+}
+
+.title {
+  font: 18px 'Trebuchet MS';
+  color: #444;
+  text-align: center;
+}
+
+.dContainer {
+  flex: 1 0 21%;
+  margin: 5px;
+  /* height: 100px; */
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(red, white, black);
+  box-shadow: 4px 5px 4px 0px black;
+   border: 1px solid red;
+}
+
+.DrawnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: rgba(255,0,0,0.3);
+}
+
+.icon {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 1px black;
+}
+
+.drawnItemsContainer .card {
+  width: 53px;
+  max-height: 111px;
+  pointer-events: none;
+}
+
+.orignalCardContainer {
+  padding-top: 100px;
+}
+
+
+.ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  min-height: 76px;
+  justify-content: space-around;
+  position: fixed;
+  left: 50%;
+  top: inherit;
+  padding: 10px;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-image: linear-gradient(red, #090908);
+  border: 1px solid red;
+  box-shadow: 4px 5px 4px 0px black;
+}
+
+.App {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/5ce5e020b417410001dee431/1620845343826-J7Z2GP96C9C2B25LO9E7/black.gif?format=1000w);
+  background-attachment: fixed;
+}
+
+.dContainer .drawnItemsContainer .card {
+  justify-content: center;
+  align-items: center;
+  width: 92px;
+}
+
+.dContainer .drawnItemsContainer .card .card__symbol:before {
+  font-size: 12px;
+}
